@@ -48,25 +48,29 @@ namespace CompanyMailingList
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            ShowBD();
+            //ShowBD();
+          // Так как БД загружается программно, данный код можно не использовать.
+          // Данный код, предназначен для выгрузки данных из таблиц. Подход DataBaseFirst
+
         }
-        async void ShowBD()
-        {
-            await Task.Run((() =>
-            {
-                using (SqlConnection data = new SqlConnection("Server = (localdb)\\mssqllocaldb; Database = UserInformDB; Trusted_Connection = true;"))
-                {
-                    data.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Informations", data);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-                    dataGridView1.DataSource = table;
-                }
-            }));
-        }
+        //async void ShowBD()
+        //{
+        //    await Task.Run((() =>
+        //    {
+        //        using (SqlConnection data = new SqlConnection("Server = (localdb)\\mssqllocaldb; Database = UserInformDB; Trusted_Connection = true;"))
+        //        {
+        //            data.Open();
+        //            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Informations", data);
+        //            DataTable table = new DataTable();
+        //            adapter.Fill(table);
+        //            dataGridView1.DataSource = table;
+        //        }
+        //    }));
+        //}
         private void Search(object sender, EventArgs e)
         {
            SearchInformation();
+           
         }
 
        async  void SearchInformation()
