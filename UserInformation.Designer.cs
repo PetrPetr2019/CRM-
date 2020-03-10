@@ -201,7 +201,7 @@
         protected internal System.Windows.Forms.CheckBox checkBox1;
         protected internal System.Windows.Forms.CheckBox checkBox2;
         protected internal System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
         protected internal System.Windows.Forms.Button button1;
+        protected internal System.Windows.Forms.Button button2;
     }
 }

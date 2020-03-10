@@ -16,6 +16,7 @@ namespace CompanyMailingList
         }
 
         public virtual DbSet<Informations> Informations { get; set; }
+        public virtual DbSet<Documents> Documents { get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,10 +26,10 @@ namespace CompanyMailingList
             }
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            OnModelCreatingPartial(modelBuilder);
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Document>();
+        //}
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
